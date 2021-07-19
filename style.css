@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121213;
+    min-height: 100vh;
+}
+
+.name {
+    position: relative;
+}
+
+.name::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #03e9f4;
+    animation: blinkCursor 0.8s steps(3) infinite;
+}
+
+@keyframes blinkCursor {
+
+    0%,
+    75% {
+        opacity: 1;
+    }
+
+    76%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.name h2 {
+    font-family: arial;
+    position: relative;
+    color: #03e9f4;
+    letter-spacing: 5px;
+    font-size: 4em;
+    text-transform: uppercase;
+    animation: typing 8s steps(16) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes typing {
+
+    0%,
+    90%,
+    100% {
+        width: 0;
+    }
+    30%,60%{
+        width: 741.406px;
+    }
+}
